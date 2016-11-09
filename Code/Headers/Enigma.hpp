@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "Rotor.hpp"
+#include "KeySheet.hpp"
 
 class Enigma
 {
