@@ -4,6 +4,7 @@
 #include <iostream>
 #include "Rotor.hpp"
 #include "KeySheet.hpp"
+#include "RotorCollection.hpp"
 
 class Enigma
 {
@@ -12,7 +13,10 @@ class Enigma
 	Enigma();
 
 	private:
-	void addRotor(Rotor&);
+	void 				buildRotors();
+
+	private:
+	std::string 		output_file;
 
 };
 

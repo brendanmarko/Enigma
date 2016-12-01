@@ -3,7 +3,7 @@
 int main()
 {
 
-	Enigma curr_enigma;
+	Enigma e;
 	return (0);
 
 }
