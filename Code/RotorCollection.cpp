@@ -38,7 +38,32 @@ Rotor& RotorCollection::accessRotor(int i)
 	return rotors.at(i);
 }
 
-void RotorCollection::handleLetter(char c)
+void RotorCollection::handleInput(std::string input)
 {
+
+	curr_char = ' ';
+	std::cout << "Passed input: " << input << std::endl;
+
+	for (int i = 0; i < input.length(); i++)
+	{
+		curr_char = input.at(i);
+		mappingBeforePlug(curr_char);
+		std::cout << "curr_char: " << curr_char << std::endl;
+	}
+
+}
+
+void RotorCollection::mappingBeforePlug(char &curr_char)
+{
+	int temp = 0;
+
+	for (Rotor r : rotors)
+	{
+		std::cout << "curr_char: " << curr_char << std::endl;
+		temp = r.findLetterPos(curr_char);
+		std::cout << "temp " << temp << std::endl;
+		curr_char = r.retrieveLetter(temp);
+		std::cout << "curr_value " << curr_char << std::endl;
+	}
 
 }

@@ -19,13 +19,13 @@ Enigma::Enigma()
 	addStartPos(rotors);
 
 	// Enigma Initialized
-	std::cout << "Enigma ready for use!" << std::endl;	
+	std::cout << "Enigma ready for use, enter message: " << std::endl;	
 
 	// Get user input
 	getline(std::cin, plaintext);
 
 	// Handle user input
-
+	rotors.handleInput(plaintext);
 
 }
 
@@ -44,11 +44,6 @@ void Enigma::buildRotors(std::vector<int> rotors)
 	oss << rotors.at(2);
 	r_rotor = Rotor(oss.str());
 	oss.str(std::string());
-}
-
-void Enigma::viewRotors()
-{
-	std::cout << r1 << ", " << r2 << ", " << r3 << std::endl;
 }
 
 void Enigma::addStartPos(RotorCollection& rotors)

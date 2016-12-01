@@ -92,3 +92,19 @@ void Rotor::lowerConvert(char& c)
 	}
 
 }
+
+void Rotor::rotateRotor()
+{
+	curr_pos++;
+	rotations++;
+}
+
+int Rotor::findLetterPos(char c)
+{
+	return (int) c - 97;
+}
+
+char Rotor::retrieveLetter(int i)
+{
+	return alphabet[i];
+}
