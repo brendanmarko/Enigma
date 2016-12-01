@@ -14,6 +14,7 @@ class RotorCollection
 	void 	addRotor(Rotor&);
 	void 	viewAlphabets();
 	int	 	numOfRotors();
+	void 	handleLetter(char);
 
 	private:
 	int 					num_rotors;

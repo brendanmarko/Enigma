@@ -10,6 +10,8 @@ class Rotor
 
 	public:
 	Rotor(std::string);
+
+	public:
 	int 				getStartPos();
 	void 				buildAlphabet(std::string);
 	void 				printAlphabet();
@@ -23,6 +25,7 @@ class Rotor
 	std::string 		file_path;
 	std::string			rotor_value;
 	int 				rotations;
+	std::string 		temp;
 
 };
 

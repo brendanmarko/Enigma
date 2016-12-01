@@ -28,3 +28,8 @@ void RotorCollection::viewAlphabets()
 	}
 
 }
+
+void RotorCollection::handleLetter(char c)
+{
+
+}
