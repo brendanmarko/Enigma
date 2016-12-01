@@ -1,5 +1,10 @@
 #include "Headers/RotorCollection.hpp"
 
+RotorCollection::RotorCollection()
+{
+	// empty
+}
+
 RotorCollection::RotorCollection(Rotor& r1, Rotor& r2, Rotor& r3)
 : num_rotors(0)
 {
@@ -21,12 +26,16 @@ void RotorCollection::addRotor(Rotor& curr_rotor)
 
 void RotorCollection::viewAlphabets()
 {
-
-	for (int i = 0; i < num_rotors; i++)
+	for (Rotor r : rotors)
 	{
-		rotors[i].printAlphabet();
+		r.printAlphabet();
 	}
 
+}
+
+Rotor& RotorCollection::accessRotor(int i)
+{
+	return rotors.at(i);
 }
 
 void RotorCollection::handleLetter(char c)

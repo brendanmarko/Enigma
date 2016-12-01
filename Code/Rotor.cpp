@@ -1,8 +1,13 @@
 #include "Headers/Rotor.hpp"
 
-Rotor::Rotor(std::string rotor_value)
+Rotor::Rotor()
 {
+	// empty
+}
 
+Rotor::Rotor(std::string rotor_value)
+: curr_pos(0), a(0)
+{
 	// Build file path for target file
 	file_path = "Rotors/Rotor";
 	file_path.append(rotor_value);
@@ -12,19 +17,17 @@ Rotor::Rotor(std::string rotor_value)
 	getFileContents();
 	buildAlphabet(rotor_contents);
 
-	std::cout << "New Rotor created from [" << file_path << "] @ ";
+	std::cout << "New Rotor created from [" << file_path << "] : ";
 	printAlphabet();
-
 }
 
-int Rotor::getStartPos()
+int Rotor::getCurrPos()
 {
-	return start_pos;
+	return curr_pos;
 }
 
 void Rotor::buildAlphabet(std::string permutation)
 {
-	
 	for (int i = 0; i < 26; i++)
 	{
 		alphabet[i] = permutation[i];
@@ -44,7 +47,6 @@ void Rotor::printAlphabet()
 
 void Rotor::getFileContents()
 {
-
 	std::string 			line = "";
 	std::ifstream 			target_file;
 
@@ -58,7 +60,7 @@ void Rotor::getFileContents()
 	      rotor_contents = line;
 	    }
 
-    target_file.close();
+	target_file.close();
 	
 	}
 
@@ -67,4 +69,26 @@ void Rotor::getFileContents()
 int Rotor::getRotations()
 {
 	return rotations;
+}
+
+// setStartPos(char)
+// This function determines where the Rotor should set its start_pos based upon the character intake 
+// ie) a=0, z=25
+void Rotor::setStartPos(char c)
+{
+	lowerConvert(c);
+	curr_pos = (int)c - 97;
+}
+
+// lowerConvert(char&)
+// This function replaces passed char with lower-case conversion if needed
+void Rotor::lowerConvert(char& c)
+{
+	a = (int) c;
+
+	if (a >= 65 && a <= 90)
+	{
+		c = tolower(c);
+	}
+
 }

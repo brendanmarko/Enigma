@@ -1,5 +1,10 @@
 #include "Headers/KeySheet.hpp"
 
+KeySheet::KeySheet()
+{
+	// empty
+}
+
 KeySheet::KeySheet(std::string keysheet_value)
 {
 	// Build file path for target file
@@ -59,6 +64,7 @@ void KeySheet::buildRotor(std::string line)
 
 void KeySheet::buildAlpha(std::string line)
 {
+
 
 	for (int i = 0; i < line.length(); i++)
 	{

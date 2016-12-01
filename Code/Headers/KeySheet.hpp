@@ -10,8 +10,8 @@
 
 class KeySheet
 {
-
 	public:
+	KeySheet();
 	KeySheet(std::string);
 
 	public:
@@ -26,7 +26,6 @@ class KeySheet
 	std::vector<int>		rotor_order;
 	std::vector<char>		start_chars;
 	std::string 			file_path;
-
 };
 
 #endif

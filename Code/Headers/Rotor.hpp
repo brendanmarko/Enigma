@@ -7,26 +7,27 @@
 
 class Rotor 
 {
-
 	public:
+	Rotor();
 	Rotor(std::string);
 
 	public:
-	int 				getStartPos();
+	int 				getCurrPos();
 	void 				buildAlphabet(std::string);
 	void 				printAlphabet();
 	void 				getFileContents();
 	int 				getRotations();
+	void 				setStartPos(char);
+	void 				lowerConvert(char&);
 
 	private:
-	int 				start_pos;
-	std::string 		rotor_contents;
+	int					a;
+	int 				curr_pos;
 	char 				alphabet[26];
+	int 				rotations;
 	std::string 		file_path;
 	std::string			rotor_value;
-	int 				rotations;
-	std::string 		temp;
-
+	std::string 		rotor_contents;
 };
 
 #endif

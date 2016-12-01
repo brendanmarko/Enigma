@@ -16,6 +16,7 @@ class Enigma
 
 	public:
 	void 				buildRotors(std::vector<int>);
+	void 				addStartPos(RotorCollection&);
 	void 				viewRotors();
 
 	private:
@@ -23,6 +24,9 @@ class Enigma
 	std::string 		output_file;
 	std::string 		sheet_number;
 	std::string			r1, r2, r3;
+	Rotor 				l_rotor, m_rotor, r_rotor;
+	RotorCollection 	rotors;
+	KeySheet 			keysheet;
 
 };
 
