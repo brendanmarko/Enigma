@@ -23,15 +23,19 @@ class Rotor
 	void 					lowerConvert(char&);
 	int 					findLetterPos(char);
 	char 					retrieveLetter(int);
+	void 					buildInverse();
+	char 					convertPosToChar(int);
+	void 					printInverse();
 
 	private:
 	int						a;
 	int 					curr_pos;
-	std::array<char, 26>	alphabet;
 	int 					rotations;
 	std::string 			file_path;
 	std::string				rotor_value;
 	std::string 			rotor_contents;
+	std::array<char, 26>	alphabet;
+	std::array<char, 26>	inverse_alphabet;
 };
 
 #endif

@@ -16,6 +16,7 @@ Rotor::Rotor(std::string rotor_value)
 	// Access target file and write to string
 	getFileContents();
 	buildAlphabet(rotor_contents);
+	buildInverse();
 
 	std::cout << "New Rotor created from [" << file_path << "] : ";
 	printAlphabet();
@@ -107,4 +108,32 @@ int Rotor::findLetterPos(char c)
 char Rotor::retrieveLetter(int i)
 {
 	return alphabet[i];
+}
+
+// convertPosToChar
+// This function takes a position from alphabet and converts it into the appropriate char
+char Rotor::convertPosToChar(int i)
+{
+	return (char) (i+97);
+}
+
+// buildInverse()
+// This functions builds an inverse of the alphabet array for the flipped iterations
+void Rotor::buildInverse()
+{
+	for (int i = 0; i < alphabet.size(); i++)
+	{
+		inverse_alphabet[findLetterPos(retrieveLetter(i))] = convertPosToChar(i);
+	}
+
+}
+
+void Rotor::printInverse()
+{
+	for (int i = 0; i < inverse_alphabet.size(); i++)
+	{
+		std::cout << inverse_alphabet.at(i);
+	}
+
+	std::cout << std::endl;
 }

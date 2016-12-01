@@ -2,7 +2,6 @@
 
 Enigma::Enigma()
 {
-
 	// Read in Keysheet first to initialize the Enigma
 	std::cout << "Enter Keysheet date value: ";
 	getline(std::cin, sheet_number);

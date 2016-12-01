@@ -41,30 +41,25 @@ Rotor& RotorCollection::accessRotor(int i)
 
 void RotorCollection::handleInput(std::string input)
 {
-
 	c = ' ';
-	std::cout << "Passed input: " << input << std::endl;
 
 	for (int i = 0; i < input.length(); i++)
 	{
 		c = input.at(i);
+		std::cout << "Results: " << c;
 		normalIteration(c);
-		std::cout << "c: " << c << std::endl;
 		reflectorScramble(c);
-		std::cout << "c: " << c << std::endl;
 		reverseIteration(c);
+		std::cout << ", " << c << std::endl;
 	}
 
 }
 
 void RotorCollection::normalIteration(char& c)
 {
-	int temp = 0;
-
 	for (Rotor r : rotors)
 	{
-		temp = r.findLetterPos(c);
-		c = r.retrieveLetter(temp);
+		c = r.retrieveLetter(r.findLetterPos(c));
 	}
 
 }
@@ -74,7 +69,11 @@ void RotorCollection::reflectorScramble(char& c)
 	reflector.setReflectorLetter(c);
 }
 
-void reverseIteration(char& c)
+void RotorCollection::reverseIteration(char& c)
 {
-	
+	for (int i = numOfRotors()-1; i >= 0; i--)
+	{
+		c = rotors.at(i).retrieveLetter(rotors.at(i).findLetterPos(c));
+	}
+
 }
