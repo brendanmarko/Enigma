@@ -5,6 +5,7 @@
 #include <vector>
 #include <algorithm>
 #include "Rotor.hpp"
+#include "Reflector.hpp"
 
 class RotorCollection
 {
@@ -18,12 +19,15 @@ class RotorCollection
 	int	 				numOfRotors();
 	Rotor& 				accessRotor(int);
 	void 				handleInput(std::string);
-	void 				mappingBeforePlug(char&);
+	void 				normalIteration(char&);
+	void 				reflectorScramble(char&);
+	void 				reverseIteration(char&);
 
 	private:
+	Reflector 			reflector;
 	int 				num_rotors;
 	std::vector<Rotor> 	rotors;
-	char 				curr_char;
+	char 				c;
 };
 
 #endif

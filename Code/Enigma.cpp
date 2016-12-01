@@ -29,6 +29,8 @@ Enigma::Enigma()
 
 }
 
+// buildRotors(std::vector)
+// This function assigns the Rotors their designated alphabets according to the Rotor setup
 void Enigma::buildRotors(std::vector<int> rotors)
 {
 	std::ostringstream oss;
@@ -46,6 +48,8 @@ void Enigma::buildRotors(std::vector<int> rotors)
 	oss.str(std::string());
 }
 
+// addStartPos(RotorCollection&)
+// This function assigns starting positions to the Rotors based upon the KeySheet selected
 void Enigma::addStartPos(RotorCollection& rotors)
 {
 	for (int i = 0; i < rotors.numOfRotors(); i++)

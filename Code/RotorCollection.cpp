@@ -11,6 +11,7 @@ RotorCollection::RotorCollection(Rotor& r1, Rotor& r2, Rotor& r3)
 	addRotor(r1);
 	addRotor(r2);
 	addRotor(r3);
+	reflector = Reflector("1");
 }
 
 int RotorCollection::numOfRotors()
@@ -41,29 +42,39 @@ Rotor& RotorCollection::accessRotor(int i)
 void RotorCollection::handleInput(std::string input)
 {
 
-	curr_char = ' ';
+	c = ' ';
 	std::cout << "Passed input: " << input << std::endl;
 
 	for (int i = 0; i < input.length(); i++)
 	{
-		curr_char = input.at(i);
-		mappingBeforePlug(curr_char);
-		std::cout << "curr_char: " << curr_char << std::endl;
+		c = input.at(i);
+		normalIteration(c);
+		std::cout << "c: " << c << std::endl;
+		reflectorScramble(c);
+		std::cout << "c: " << c << std::endl;
+		reverseIteration(c);
 	}
 
 }
 
-void RotorCollection::mappingBeforePlug(char &curr_char)
+void RotorCollection::normalIteration(char& c)
 {
 	int temp = 0;
 
 	for (Rotor r : rotors)
 	{
-		std::cout << "curr_char: " << curr_char << std::endl;
-		temp = r.findLetterPos(curr_char);
-		std::cout << "temp " << temp << std::endl;
-		curr_char = r.retrieveLetter(temp);
-		std::cout << "curr_value " << curr_char << std::endl;
+		temp = r.findLetterPos(c);
+		c = r.retrieveLetter(temp);
 	}
 
+}
+
+void RotorCollection::reflectorScramble(char& c)
+{
+	reflector.setReflectorLetter(c);
+}
+
+void reverseIteration(char& c)
+{
+	
 }
