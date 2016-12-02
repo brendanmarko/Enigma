@@ -26,6 +26,8 @@ class Rotor
 	void 					buildInverse();
 	char 					convertPosToChar(int);
 	void 					printInverse();
+	void 					shiftAlphabet();
+	void 					resetCheck(int&, int&);
 
 	private:
 	int						a;

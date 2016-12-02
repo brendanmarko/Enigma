@@ -6,7 +6,7 @@ Rotor::Rotor()
 }
 
 Rotor::Rotor(std::string rotor_value)
-: curr_pos(0), a(0)
+: curr_pos(0), a(0), rotations(0)
 {
 	// Build file path for target file
 	file_path = "Rotors/Rotor";
@@ -94,10 +94,16 @@ void Rotor::lowerConvert(char& c)
 
 }
 
-void Rotor::rotateRotor()
-{
-	curr_pos++;
-	rotations++;
+void Rotor::shiftAlphabet()
+{	
+	char c = alphabet[0];
+
+	for (int i = 0; i < alphabet.size()-1; i++)
+	{
+		alphabet[i] = alphabet[i+1];
+	}
+
+	alphabet[alphabet.size()-1] = c;
 }
 
 int Rotor::findLetterPos(char c)
@@ -136,4 +142,32 @@ void Rotor::printInverse()
 	}
 
 	std::cout << std::endl;
+}
+
+// resetCheck(int, int)
+// This function keeps the position and rotation values within bounds
+void Rotor::resetCheck(int& r, int& p)
+{
+	if (p > 25)
+	{
+		p = 0;
+	}
+
+	if (r > 26)
+	{
+		r = 0;
+	}
+
+	return;
+}
+
+void Rotor::rotateRotor()
+{
+	// std::cout << "(BEFORE) pos, rotations " << "[" << curr_pos << ", " << rotations << "]" << std::endl;
+	curr_pos++;
+	rotations++;
+	resetCheck(rotations, curr_pos);
+	shiftAlphabet();
+	buildInverse();
+	// std::cout << "(AFTER) pos, rotations " << "[" << curr_pos << ", " << rotations << "]" << std::endl;
 }

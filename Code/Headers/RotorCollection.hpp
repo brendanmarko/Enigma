@@ -22,6 +22,7 @@ class RotorCollection
 	void 				normalIteration(char&);
 	void 				reflectorScramble(char&);
 	void 				reverseIteration(char&);
+	void 				rotorHandler();
 
 	private:
 	Reflector 			reflector;
