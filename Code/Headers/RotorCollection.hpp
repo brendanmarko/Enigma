@@ -29,6 +29,7 @@ class RotorCollection
 	int 				num_rotors;
 	std::vector<Rotor> 	rotors;
 	char 				c;
+	std::string 		result;
 };
 
 #endif

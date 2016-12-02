@@ -42,7 +42,6 @@ Rotor& RotorCollection::accessRotor(int i)
 void RotorCollection::handleInput(std::string input)
 {
 	c = ' ';
-	std::cout << "Result: ";
 
 	for (int i = 0; i < input.length(); i++)
 	{
@@ -50,11 +49,11 @@ void RotorCollection::handleInput(std::string input)
 		normalIteration(c);
 		reflectorScramble(c);
 		reverseIteration(c);
-		std::cout << c;
 		rotorHandler();
+		result += c;
 	}
 
-	std::cout << std::endl;
+	std::cout << "Result: " << result << std::endl;
 
 }
 
@@ -83,18 +82,20 @@ void RotorCollection::reverseIteration(char& c)
 
 void RotorCollection::rotorHandler()
 {
-	// std::cout << "Rotating r_right" << std::endl;
-	rotors.at(numOfRotors()-1).rotateRotor();
 
-	if (rotors.at(numOfRotors()-1).getRotations() == 26)
+	// viewAlphabets();
+	// std::cout << "Rotating r_right" << std::endl;
+	rotors.at(2).rotateRotor();
+
+	if (rotors.at(2).getRotations() == 26)
 	{
 		// std::cout << "	Rotating r_middle" << std::endl;
-		rotors.at(numOfRotors()-2).rotateRotor();
+		rotors.at(1).rotateRotor();
 
-		if (rotors.at(numOfRotors()-2).getRotations() == 26)
+		if (rotors.at(1).getRotations() == 26)
 		{
 			// std::cout << "		Rotating r_left" << std::endl;
-			rotors.at(numOfRotors()-3).rotateRotor();
+			rotors.at(0).rotateRotor();
 		}
 
 	}
