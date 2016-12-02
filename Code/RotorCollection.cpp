@@ -83,18 +83,18 @@ void RotorCollection::reverseIteration(char& c)
 void RotorCollection::rotorHandler()
 {
 
-	// viewAlphabets();
+	viewAlphabets();
 	// std::cout << "Rotating r_right" << std::endl;
 	rotors.at(2).rotateRotor();
 
 	if (rotors.at(2).getRotations() == 26)
 	{
-		// std::cout << "	Rotating r_middle" << std::endl;
+		//  std::cout << "	Rotating r_middle" << std::endl;
 		rotors.at(1).rotateRotor();
 
 		if (rotors.at(1).getRotations() == 26)
 		{
-			// std::cout << "		Rotating r_left" << std::endl;
+			//  std::cout << "		Rotating r_left" << std::endl;
 			rotors.at(0).rotateRotor();
 		}
 

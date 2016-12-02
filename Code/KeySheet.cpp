@@ -19,10 +19,9 @@ KeySheet::KeySheet(std::string keysheet_value)
 
 void KeySheet::getFileContents()
 {
-
-	int 					counter = 0;
-	std::string 			line = "";
-	std::ifstream 			target_file;
+	int 				counter = 0;
+	std::string 		line = "";
+	std::ifstream 		target_file;
 
 	target_file.open(file_path.c_str(), std::ios::out);
 
@@ -54,7 +53,6 @@ void KeySheet::getFileContents()
 
 void KeySheet::buildRotor(std::string line)
 {
-
 	for (int i = 0; i < line.length(); i++)
 	{
 		rotor_order.push_back(line.at(i) - '0');
@@ -64,8 +62,6 @@ void KeySheet::buildRotor(std::string line)
 
 void KeySheet::buildAlpha(std::string line)
 {
-
-
 	for (int i = 0; i < line.length(); i++)
 	{
 		start_chars.push_back(line.at(i));
@@ -75,7 +71,6 @@ void KeySheet::buildAlpha(std::string line)
 
 void KeySheet::viewInfo()
 {
-
 	for (int i = 0; i < rotor_order.size(); i++)
 	{
 		std::cout << rotor_order.at(i);
