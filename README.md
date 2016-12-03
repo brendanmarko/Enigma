@@ -16,12 +16,12 @@ The KeySheet contains all the information needed to construct the layout of the 
 
 # Note on Keysheets
 ### Creating new KeySheets, such as the one below, use the format given  
-132
-ARK
-AB CD EX FU GR WM
+* 132
+* ARK
+* AB CD EX FU GR WM
 
 ### Format
-Rotor order consisting of permutations of {1, 2, 3} of size 3
-Rotor Start Positions per Rotor, Left to Right
-6 Permutation pairs to be used on the PlugBoard to swap letters at input
+* Rotor order consisting of permutations of {1, 2, 3} of size 3
+* Rotor Start Positions per Rotor, Left to Right
+* 6 Permutation pairs to be used on the PlugBoard to swap letters at input
 	* Space used as a tokenizer for Plugboard initialization
