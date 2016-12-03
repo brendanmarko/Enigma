@@ -20,7 +20,7 @@ To create a new Keysheet with your own inputs follow this convention
 * ARK
 * AB CD EX FU GR WM
 
-[Format]
+Format
 * Rotor order consisting of permutations of {1, 2, 3} of size 3
 * Rotor Start Positions per Rotor, Left to Right
 * 6 Permutation pairs to be used on the PlugBoard to swap letters at input
