@@ -15,17 +15,17 @@ class Enigma
 	Enigma();
 
 	public:
-	void 				buildRotors(std::vector<int>);
-	void 				addStartPos(RotorCollection&);
+	void 			buildRotors(std::vector<int>);
+	void 			addStartPos(RotorCollection&);
 
 	private:
 	std::string 		plaintext;
 	std::string 		output_file;
 	std::string 		sheet_number;
-	Rotor 				l_rotor, m_rotor, r_rotor;
+	Rotor 			l_rotor, m_rotor, r_rotor;
 	RotorCollection 	rotors;
-	Plugboard			plugboard;
-	KeySheet 			keysheet;
+	Plugboard		plugboard;
+	KeySheet 		keysheet;
 };
 
 #endif
