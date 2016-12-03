@@ -47,14 +47,16 @@ void RotorCollection::handleInput(std::string input)
 
 	for (int i = 0; i < input.length(); i++)
 	{	
-		c = input.at(i);
+		c = tolower(input.at(i));
 
 		if (!specialChar(c))
 		{
+		plugboard.checkPlugboard(c);
 		normalIteration(c);
 		reflectorScramble(c);
 		reverseIteration(c);
 		rotorHandler();
+		plugboard.checkPlugboard(c);
 		}
 		
 		result += c;
@@ -73,7 +75,7 @@ void RotorCollection::normalIteration(char& c)
 
 	for (int i = numOfRotors()-1; i >= 0; i--)
 	{
-		c = rotors.at(i).retrieveLetter(rotors.at(i).findLetterPos(std::tolower(c)));
+		c = rotors.at(i).retrieveLetter(rotors.at(i).findLetterPos(c));
 	}
 
 }

@@ -6,11 +6,11 @@
 #include <iostream>
 #include "Rotor.hpp"
 #include "KeySheet.hpp"
+#include "Plugboard.hpp"
 #include "RotorCollection.hpp"
 
 class Enigma
 {
-
 	public:
 	Enigma();
 
@@ -24,8 +24,8 @@ class Enigma
 	std::string 		sheet_number;
 	Rotor 				l_rotor, m_rotor, r_rotor;
 	RotorCollection 	rotors;
+	Plugboard			plugboard;
 	KeySheet 			keysheet;
-
 };
 
 #endif

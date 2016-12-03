@@ -14,7 +14,6 @@ KeySheet::KeySheet(std::string keysheet_value)
 
 	// Extract info
 	getFileContents();
-
 }
 
 void KeySheet::getFileContents()
@@ -74,6 +73,8 @@ void KeySheet::buildAlpha(std::string line)
 
 }
 
+//buildPlugboard(std::string)
+// This function takes a line of input and generates pairs, using the space between the pairs as a tokenizer
 void KeySheet::buildPlugboard(std::string line)
 {
 
@@ -89,13 +90,13 @@ void KeySheet::buildPlugboard(std::string line)
 		}
 
 		else if (x < 1)
-		{	c = line.at(i);
+		{	c = tolower(line.at(i));
 			x++;
 		}
 
 		else
 		{
-		plugboard_swaps.push_back(std::make_pair(c, line.at(i)));
+		plugboard_swaps.push_back(std::make_pair(c, tolower(line.at(i))));
 		x = 0;
 		}
 
@@ -136,4 +137,9 @@ std::vector<int> KeySheet::getRotors()
 std::vector<char> KeySheet::getAlphas()
 {
 	return start_chars;
+}
+
+std::vector<std::pair<char, char>> KeySheet::getPlugboard()
+{
+	return plugboard_swaps;
 }

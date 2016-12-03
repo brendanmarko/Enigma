@@ -2,32 +2,31 @@
 
 Plugboard::Plugboard()
 {
-	plugboard = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-	temp = " ";
+	// empty
 }
 
-Plugboard::Plugboard(std::string s)
+Plugboard::Plugboard(std::vector<std::pair<char, char>> board)
 {
-	printPlugboard();
-	std::cout << "Before splitting string: " << s << std::endl;
-
+	letter_swaps = board;
 }
 
 // checkPlugboard(char&)
 // This function checks to see if a character has to be swapped passing through the Plugboard
 void Plugboard::checkPlugboard(char& c)
 {
-
-
-
-}
-
-void Plugboard::printPlugboard()
-{
-	for (int i = 0; i < plugboard.size(); i++)
+	for (int i = 0; i < letter_swaps.size(); i++)
 	{
-		std::cout << plugboard[i];
+
+		if (c == letter_swaps.at(i).first)
+		{
+			c = letter_swaps.at(i).second;
+		}
+
+		else if (c == letter_swaps.at(i).second)
+		{
+			c = letter_swaps.at(i).first;
+		}
+
 	}
 
-	std::cout << std::endl;
 }

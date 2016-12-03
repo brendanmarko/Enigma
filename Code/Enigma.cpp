@@ -18,6 +18,8 @@ Enigma::Enigma()
 	addStartPos(rotors);
 
 	// Set the Plugboard settings
+	plugboard = Plugboard(keysheet.getPlugboard());
+	rotors.setPlugboard(plugboard);
 
 	// Enigma Initialized
 	std::cout << "Enigma ready for use!" << std::endl;	

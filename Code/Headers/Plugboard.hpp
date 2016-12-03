@@ -3,21 +3,21 @@
 
 #include <array>
 #include <string>
+#include <vector>
 #include <iostream>
 
 class Plugboard
 {
 	public:
 	Plugboard();
-	Plugboard(std::string);
+	Plugboard(std::vector<std::pair<char, char>>);
 
 	public:
-	void 					checkPlugboard(char&);
-	void					printPlugboard();
+	void 									checkPlugboard(char&);
+	void									printPlugboard();
 
 	private:
-	std::array<char, 26> 	plugboard;
-	std::string 			temp;
+	std::vector<std::pair<char, char>> 		letter_swaps;
 };
 
 #endif

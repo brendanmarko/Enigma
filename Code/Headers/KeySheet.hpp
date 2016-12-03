@@ -21,6 +21,7 @@ class KeySheet
 	void 									viewInfo();
 	std::vector<int> 						getRotors();
 	std::vector<char> 						getAlphas();	
+	std::vector<std::pair<char, char>>		getPlugboard();
 
 	private:
 	std::vector<int>						rotor_order;

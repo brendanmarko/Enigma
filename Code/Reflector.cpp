@@ -8,7 +8,7 @@ Reflector::Reflector()
 Reflector::Reflector(std::string reflector_num)
 {
 	// Build file path for target file
-	file_path = "Reflectors/reflector";
+	file_path = "Reflectors/Reflector";
 	file_path.append(reflector_num);
 	file_path.append(".txt");
 
