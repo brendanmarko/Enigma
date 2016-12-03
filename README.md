@@ -15,12 +15,13 @@ Lastly, Keysheets as "/KeySheets/sheetX.txt"
 The KeySheet contains all the information needed to construct the layout of the machine with respect to the Rotors, Reflector and Plugboard settings.
 
 # Note on Keysheets
-To create a new Keysheet with your own inputs follow this convention
-	132
-	ARK
-	AB CD EX FU GR WM
+* To create a new Keysheet with your own inputs follow this convention
+	* 132
+	* ARK
+	* AB CD EX FU GR WM
 
-[Format]
-	[Rotor order consisting of permutations of {1, 2, 3} with size 3]
-	[Rotor Start Positions per Rotor, Left to Right]
-	[6 Permutation pairs to be used on the PlugBoard to swap letters at input]
+* [Format]
+	* [Rotor order consisting of permutations of {1, 2, 3} of size 3]
+	* [Rotor Start Positions per Rotor, Left to Right]
+	* [6 Permutation pairs to be used on the PlugBoard to swap letters at input]
+		* [Spaces used as a tokenizer]
