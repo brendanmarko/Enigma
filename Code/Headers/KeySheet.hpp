@@ -5,6 +5,7 @@
 #include <string>
 #include <fstream>
 #include <utility>
+#include <cstdlib>
 #include <iostream>
 
 class KeySheet

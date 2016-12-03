@@ -18,6 +18,7 @@ Rotor::Rotor(std::string rotor_value)
 	buildAlphabet(rotor_contents);
 	buildInverse();
 
+	// Output Rotor info for debug
 	std::cout << "New Rotor created from [" << file_path << "] : ";
 	printAlphabet();
 }

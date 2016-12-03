@@ -1,11 +1,11 @@
 compile:
-	g++ -std=c++11 -o e *.cpp
+	g++ -std=c++11 -o enigma *.cpp
 
 clean:
-	rm e
+	rm enigma
 
 edit:
 	subl *.cpp
 
 run:
-	./e
+	./enigma

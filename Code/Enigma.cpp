@@ -2,12 +2,23 @@
 
 Enigma::Enigma()
 {
-	// Read in Keysheet first to initialize the Enigma
-	std::cout << "Enter Keysheet date value: ";
-	getline(std::cin, sheet_number);
+	// Checks for invalid sheet input
+	while (1)
+	{
+		// Read in Keysheet first to initialize the Enigma
+		std::cout << "Enter Keysheet date value: ";
+		getline(std::cin, sheet_number);
+
+		if (std::stoi(sheet_number) >= 1 && std::stoi(sheet_number) <= 31)
+		{
+			break;
+		}
+
+	}
+
 	keysheet = KeySheet(sheet_number);
 
-	// Verify KeySheet info
+	// Display KeySheet info for debug
 	keysheet.viewInfo();
 
 	// Assign Rotor values
@@ -22,7 +33,6 @@ Enigma::Enigma()
 	rotors.setPlugboard(plugboard);
 
 	// Enigma Initialized
-	std::cout << "Enigma ready for use!" << std::endl;	
 	std::cout << "Secret: ";
 
 	// Get user input
