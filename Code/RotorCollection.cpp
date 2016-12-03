@@ -11,7 +11,7 @@ RotorCollection::RotorCollection(Rotor& r1, Rotor& r2, Rotor& r3)
 	addRotor(r1);
 	addRotor(r2);
 	addRotor(r3);
-	reflector = Reflector("2");
+	reflector = Reflector("1");
 }
 
 int RotorCollection::numOfRotors()
@@ -132,4 +132,9 @@ bool RotorCollection::specialChar(char& c)
 	}
 
 	return false;
+}
+
+void RotorCollection::setPlugboard(Plugboard& new_plugboard)
+{
+	plugboard = new_plugboard;
 }

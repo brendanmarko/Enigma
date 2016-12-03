@@ -17,8 +17,10 @@ Enigma::Enigma()
 	// Add start positions to Rotors
 	addStartPos(rotors);
 
+	// Set the Plugboard settings
+
 	// Enigma Initialized
-	std::cout << "Enigma ready for use!!!" << std::endl;	
+	std::cout << "Enigma ready for use!" << std::endl;	
 	std::cout << "Secret: ";
 
 	// Get user input

@@ -7,6 +7,7 @@
 #include <cctype>
 #include <clocale>
 #include "Rotor.hpp"
+#include "Plugboard.hpp"
 #include "Reflector.hpp"
 
 class RotorCollection
@@ -26,8 +27,10 @@ class RotorCollection
 	void 					reverseIteration(char&);
 	void 					rotorHandler();
 	bool					specialChar(char&);
+	void					setPlugboard(Plugboard&);
 
 	private:
+	Plugboard 				plugboard;
 	Reflector 				reflector;
 	int 					num_rotors;
 	std::vector<Rotor>		rotors;

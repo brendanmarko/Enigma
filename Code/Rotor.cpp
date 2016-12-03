@@ -168,11 +168,9 @@ void Rotor::resetCheck(int& r, int& p)
 
 void Rotor::rotateRotor()
 {
-	// std::cout << "(BEFORE) pos, rotations " << "[" << curr_pos << ", " << rotations << "]" << std::endl;
 	curr_pos++;
 	rotations++;
 	resetCheck(rotations, curr_pos);
 	shiftAlphabet();
 	buildInverse();
-	// std::cout << "(AFTER) pos, rotations " << "[" << curr_pos << ", " << rotations << "]" << std::endl;
 }
