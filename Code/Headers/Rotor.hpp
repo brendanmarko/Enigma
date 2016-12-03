@@ -22,6 +22,7 @@ class Rotor
 	void 					setStartPos(char);
 	void 					lowerConvert(char&);
 	int 					findLetterPos(char);
+	char 					inverseLetter(int);
 	char 					retrieveLetter(int);
 	void 					buildInverse();
 	char 					convertPosToChar(int);

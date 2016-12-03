@@ -18,14 +18,14 @@ Enigma::Enigma()
 	addStartPos(rotors);
 
 	// Enigma Initialized
-	std::cout << "Enigma ready for use, enter message: " << std::endl;	
+	std::cout << "Enigma ready for use!!!" << std::endl;	
+	std::cout << "Secret: ";
 
 	// Get user input
 	getline(std::cin, plaintext);
 
 	// Handle user input
 	rotors.handleInput(plaintext);
-
 }
 
 // buildRotors(std::vector)

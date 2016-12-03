@@ -4,5 +4,8 @@ compile:
 clean:
 	rm e
 
+edit:
+	subl *.cpp
+
 run:
 	./e

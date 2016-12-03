@@ -4,6 +4,8 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <cctype>
+#include <clocale>
 #include "Rotor.hpp"
 #include "Reflector.hpp"
 
@@ -23,13 +25,15 @@ class RotorCollection
 	void 				reflectorScramble(char&);
 	void 				reverseIteration(char&);
 	void 				rotorHandler();
+	bool				specialChar(char&);
 
 	private:
 	Reflector 			reflector;
 	int 				num_rotors;
-	std::vector<Rotor> 	rotors;
-	char 				c;
-	std::string 		result;
+	std::vector<Rotor>	rotors;
+	char				c;
+	std::string			result;
+	std::array<char,5>	text_specials{{' ', '!', '?', '.', ','}};
 };
 
 #endif

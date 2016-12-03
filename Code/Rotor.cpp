@@ -116,6 +116,11 @@ char Rotor::retrieveLetter(int i)
 	return alphabet[i];
 }
 
+char Rotor::inverseLetter(int i)
+{
+	return inverse_alphabet[i];
+}
+
 // convertPosToChar
 // This function takes a position from alphabet and converts it into the appropriate char
 char Rotor::convertPosToChar(int i)
