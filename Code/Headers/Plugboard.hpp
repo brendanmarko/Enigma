@@ -13,8 +13,8 @@ class Plugboard
 	Plugboard(std::vector<std::pair<char, char>>);
 
 	public:
-	void 									checkPlugboard(char&);
-	void									printPlugboard();
+	void 						checkPlugboard(char&);
+	void						printPlugboard();
 
 	private:
 	std::vector<std::pair<char, char>> 		letter_swaps;
