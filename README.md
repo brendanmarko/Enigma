@@ -16,6 +16,11 @@ The KeySheet contains all the information needed to construct the layout of the 
 
 # Note on Keysheets
 To create a new Keysheet with your own inputs follow this convention:
-132						[Rotor order consisting of permutations of {1, 2, 3} with size 3]
-ARK						[Rotor Start Positions per Rotor, Left to Right]
-AB CD EX FU GR WM		[6 Permutation pairs to be used on the PlugBoard to swap letters at input]
+132						
+ARK						
+AB CD EX FU GR WM		
+
+Format
+[Rotor order consisting of permutations of {1, 2, 3} with size 3]
+[Rotor Start Positions per Rotor, Left to Right]
+[6 Permutation pairs to be used on the PlugBoard to swap letters at input]
