@@ -17,25 +17,25 @@ class RotorCollection
 	RotorCollection(Rotor& r1, Rotor& r2, Rotor& r3);
 
 	public:
-	void 					addRotor(Rotor&);
-	void 					viewAlphabets();
-	int	 					numOfRotors();
-	Rotor& 					accessRotor(int);
-	void 					handleInput(std::string);
-	void 					normalIteration(char&);
-	void 					reflectorScramble(char&);
-	void 					reverseIteration(char&);
-	void 					rotorHandler();
-	bool					specialChar(char&);
-	void					setPlugboard(Plugboard&);
+	void 				addRotor(Rotor&);
+	void 				viewAlphabets();
+	int	 			numOfRotors();
+	Rotor& 				accessRotor(int);
+	void 				handleInput(std::string);
+	void 				normalIteration(char&);
+	void 				reflectorScramble(char&);
+	void 				reverseIteration(char&);
+	void 				rotorHandler();
+	bool				specialChar(char&);
+	void				setPlugboard(Plugboard&);
 
 	private:
-	Plugboard 				plugboard;
-	Reflector 				reflector;
-	int 					num_rotors;
+	Plugboard 			plugboard;
+	Reflector 			reflector;
+	int 				num_rotors;
 	std::vector<Rotor>		rotors;
-	char					c;
-	std::string				result;
+	char				c;
+	std::string			result;
 	std::array<char,5>		special_texts{{' ', '!', '?', '.', ','}};
 };
 
