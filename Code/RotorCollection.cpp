@@ -116,13 +116,15 @@ void RotorCollection::rotorHandler()
 
 }
 
+// specialChar(char&)
+// This simple helper function checks if input is a special entry in the special_texts[] in RotorCollection
 bool RotorCollection::specialChar(char& c)
 {
 
-	for (int i = 0; i < text_specials.size(); i++)
+	for (int i = 0; i < special_texts.size(); i++)
 	{
 
-		if (c == text_specials[i])
+		if (c == special_texts[i])
 		{
 			return true;
 		}
@@ -130,5 +132,4 @@ bool RotorCollection::specialChar(char& c)
 	}
 
 	return false;
-
 }
