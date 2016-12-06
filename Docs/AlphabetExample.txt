@@ -1,27 +1,27 @@
-Rotor2:
-abcdefghijklmnopqrstuvwxyz
-plqokmawijnzseuhbrdxygvtfc
+ROTOR2:
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+PLQOKMAWIJNZSEUHBRDXYGVTFC
 
-Rotor1:
-abcdefghijklmnopqrstuvwxyz
-qmzpalwhnxojdiectuvrbgksfy
+ROTOR1:
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+QMZPALWHNXOJDIECTUVRBGKSFY
 
-Rotor0:
-abcdefghijklmnopqrstuvwxyz
-lskjfhmznxbcavgqpwoeirutyd
+ROTOR0:
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+LSKJFHMZNXBCAVGQPWOEIRUTYD
 
-Reflector:
-abcdefghijklmnopqrstuvwxyz
-hwezcvtamspoixlkyujgrfbnqd
+REFLECTOR:
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+HWEZCVTAMSPOIXLKYUJGRFBNQD
 
-Inverse_Rotor0:
-abcdefghijklmnopqrstuvwxyz
-mklzteofudcagisqpvbxwnrjyh
+INVERSE_ROTOR0:
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+MKLZTEOFUDCAGISQPVBXWNRJYH
 
-Inverse_Rotor1:
-abcdefghijklmnopqrstuvwxyz
-eupmoyvhnlwfbikdatxqrsgjzc
+INVERSE_ROTOR1:
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+EUPMOYVHNLWFBIKDATXQRSGJZC
 
-Inverse_Rotor2:
-abcdefghijklmnopqrstuvwxyz
-gqzsnyvpijebfkdacrmxowhtul
+INVERSE_ROTOR2:
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+GQZSNYVPIJEBFKDACRMXOWHTUL
