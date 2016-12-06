@@ -6,11 +6,10 @@ The program runs by asking the user for a date value to input to simulate pickin
 If you encrypt the message with one Keysheet and attempt to decrpyt it using a different Keysheet entry the message will not decode properly!
 
 # Folder Layout
-This implementation uses text files to store values for Rotors, Reflectors and KeySheets. Each of the described type has a folder to store that type of input.
-
-Rotors are stored as "/Rotors/RotorX.txt"
-Reflectors similarly "/Reflectors/ReflectorX.txt"
-Lastly, Keysheets as "/KeySheets/sheetX.txt"
+This implementation uses text files to store values for Rotors, Reflectors and KeySheets. Each of the described type has a folder to store that type of input:
+* Rotors are stored as "/Rotors/RotorX.txt"
+* Reflectors similarly "/Reflectors/ReflectorX.txt"
+* Lastly, Keysheets as "/KeySheets/sheetX.txt"
 
 The KeySheet contains all the information needed to construct the layout of the machine with respect to the Rotors, Reflector and Plugboard settings.
 
@@ -24,4 +23,4 @@ The KeySheet contains all the information needed to construct the layout of the 
 * Rotor order consisting of permutations of {1, 2, 3} of size 3
 * Rotor Start Positions per Rotor, Left to Right
 * 6 Permutation pairs to be used on the PlugBoard to swap letters at input
-	* Space used as a tokenizer
+	* Space used as a tokenizer for Plugboard initialization
