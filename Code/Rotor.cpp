@@ -19,8 +19,10 @@ Rotor::Rotor(std::string rotor_value)
 	buildInverse();
 
 	// Output Rotor info for debug
+	/*
 	std::cout << "New Rotor created from [" << file_path << "] : ";
 	printAlphabet();
+	*/
 }
 
 int Rotor::getCurrPos()

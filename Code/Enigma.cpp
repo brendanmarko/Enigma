@@ -6,20 +6,22 @@ Enigma::Enigma()
 	while (1)
 	{
 		// Read in Keysheet first to initialize the Enigma
-		std::cout << "Enter Keysheet date value: ";
+		std::cout << "Enter Keysheet date value (1-3): ";
 		getline(std::cin, sheet_number);
 
-		if (std::stoi(sheet_number) >= 1 && std::stoi(sheet_number) <= 31)
+		if (std::stoi(sheet_number) >= 1 && std::stoi(sheet_number) <= 3)
 		{
 			break;
 		}
+
+		std::cout << "Invalid value entered, try again." << std::endl;
 
 	}
 
 	keysheet = KeySheet(sheet_number);
 
 	// Display KeySheet info for debug
-	keysheet.viewInfo();
+	// keysheet.viewInfo();
 
 	// Assign Rotor values
 	buildRotors(keysheet.getRotors());
