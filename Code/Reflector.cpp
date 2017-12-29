@@ -2,7 +2,7 @@
 
 Reflector::Reflector()
 {
-
+	// empty
 }
 
 Reflector::Reflector(std::string reflector_num)
@@ -20,8 +20,8 @@ Reflector::Reflector(std::string reflector_num)
 
 void Reflector::getFileContents()
 {
-	std::string 			line = "";
-	std::ifstream 			target_file;
+	std::string 	line = "";
+	std::ifstream 	target_file;
 
 	target_file.open(file_path.c_str(), std::ios::out);
 
@@ -41,7 +41,7 @@ void Reflector::getFileContents()
 
 void Reflector::buildAlphabet(std::string permutation)
 {
-	for (int i = 0; i < 26; i++)
+	for (int i=0; i<26; i++)
 	{
 		reflector_board[i] = permutation[i];
 	}
@@ -50,7 +50,7 @@ void Reflector::buildAlphabet(std::string permutation)
 
 void Reflector::viewReflector()
 {
-	for (int i = 0; i < reflector_board.size(); i++)
+	for (int i=0; i<reflector_board.size(); i++)
 	{
 		std::cout << reflector_board.at(i);
 	}

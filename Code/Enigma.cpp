@@ -2,20 +2,17 @@
 
 Enigma::Enigma()
 {
-	// Checks for invalid sheet input
+    // Checks for invalid sheet input
 	while (1)
 	{
-		// Read in Keysheet first to initialize the Enigma
+        // Read in Keysheet first to initialize the Enigma
 		std::cout << "Enter Keysheet date value (1-3): ";
 		getline(std::cin, sheet_number);
 
-		if (std::stoi(sheet_number) >= 1 && std::stoi(sheet_number) <= 3)
-		{
+		if (std::stoi(sheet_number)>=1 && std::stoi(sheet_number)<=3)
 			break;
-		}
 
-		std::cout << "Invalid value entered, try again." << std::endl;
-
+        std::cout << "Invalid value entered, try again." << std::endl;
 	}
 
 	keysheet = KeySheet(sheet_number);
@@ -67,7 +64,7 @@ void Enigma::buildRotors(std::vector<int> rotors)
 // This function assigns starting positions to the Rotors based upon the KeySheet selected
 void Enigma::addStartPos(RotorCollection& rotors)
 {
-	for (int i = 0; i < rotors.numOfRotors(); i++)
+	for (int i=0; i<rotors.numOfRotors(); i++)
 	{
 		rotors.accessRotor(i).setStartPos(keysheet.getAlphas().at(i));
 	}

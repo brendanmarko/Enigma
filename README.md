@@ -8,11 +8,13 @@ If you encrypt the message with one Keysheet and attempt to decrpyt it using a d
 # Makefile
 There is a Makefile provided to ease compiling and running, the commands are as follows:
 ### make compile
-	compiles the application
+    compiles the application
 ### make run
 	runs the application
 ### make clean
 	removes executable
+
+The Makefile is located within the 'Code' directory.
 
 # Folder Layout
 This implementation uses text files to store values for Rotors, Reflectors and KeySheets. Each of the described type has a folder to store that type of input:

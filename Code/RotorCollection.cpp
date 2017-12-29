@@ -33,7 +33,6 @@ void RotorCollection::viewAlphabets()
 		r.printInverse();
 		std::cout << "----------" << std::endl;
 	}
-
 }
 
 Rotor& RotorCollection::accessRotor(int i)
@@ -43,20 +42,20 @@ Rotor& RotorCollection::accessRotor(int i)
 
 void RotorCollection::handleInput(std::string input)
 {
-	c = ' ';
+	c=' ';
 
-	for (int i = 0; i < input.length(); i++)
+	for (int i=0; i<input.length(); i++)
 	{	
 		c = tolower(input.at(i));
 
 		if (!specialChar(c))
 		{
-		plugboard.checkPlugboard(c);
-		normalIteration(c);
-		reflectorScramble(c);
-		reverseIteration(c);
-		rotorHandler();
-		plugboard.checkPlugboard(c);
+			plugboard.checkPlugboard(c);
+			normalIteration(c);
+			reflectorScramble(c);
+			reverseIteration(c);
+			rotorHandler();
+			plugboard.checkPlugboard(c);
 		}
 		
 		result += c;
@@ -73,7 +72,7 @@ void RotorCollection::handleInput(std::string input)
 void RotorCollection::normalIteration(char& c)
 {
 
-	for (int i = numOfRotors()-1; i >= 0; i--)
+	for (int i=numOfRotors()-1; i>=0; i--)
 	{
 		c = rotors.at(i).retrieveLetter(rotors.at(i).findLetterPos(c));
 	}
@@ -92,7 +91,7 @@ void RotorCollection::reflectorScramble(char& c)
 // Note: These iteration runs 0 -> numOfRotors()-1
 void RotorCollection::reverseIteration(char& c)
 {
-	for (int i = 0; i < numOfRotors(); i++)
+	for (int i=0; i<numOfRotors(); i++)
 	{
 		c = rotors.at(i).inverseLetter(rotors.at(i).findLetterPos(c));
 	}
@@ -110,10 +109,7 @@ void RotorCollection::rotorHandler()
 		rotors.at(1).rotateRotor();
 
 		if (rotors.at(1).getRotations() == 26)
-		{
 			rotors.at(0).rotateRotor();
-		}
-
 	}
 
 }
@@ -123,14 +119,11 @@ void RotorCollection::rotorHandler()
 bool RotorCollection::specialChar(char& c)
 {
 
-	for (int i = 0; i < special_texts.size(); i++)
+	for (int i=0; i<special_texts.size(); i++)
 	{
 
 		if (c == special_texts[i])
-		{
 			return true;
-		}
-
 	}
 
 	return false;

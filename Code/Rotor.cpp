@@ -18,8 +18,8 @@ Rotor::Rotor(std::string rotor_value)
 	buildAlphabet(rotor_contents);
 	buildInverse();
 
-	// Output Rotor info for debug
 	/*
+	// Output Rotor info for debug
 	std::cout << "New Rotor created from [" << file_path << "] : ";
 	printAlphabet();
 	*/
@@ -32,7 +32,7 @@ int Rotor::getCurrPos()
 
 void Rotor::buildAlphabet(std::string permutation)
 {
-	for (int i = 0; i < 26; i++)
+	for (int i=0; i<26; i++)
 	{
 		alphabet[i] = permutation[i];
 	}
@@ -51,8 +51,8 @@ void Rotor::printAlphabet()
 
 void Rotor::getFileContents()
 {
-	std::string 			line = "";
-	std::ifstream 			target_file;
+	std::string 	line = "";
+	std::ifstream 	target_file;
 
 	target_file.open(file_path.c_str(), std::ios::out);
 
@@ -88,22 +88,22 @@ void Rotor::setStartPos(char c)
 // This function replaces passed char with lower-case conversion if needed
 void Rotor::lowerConvert(char& c)
 {
-	a = (int) c;
+	a=(int) c;
 
-	if (a >= 65 && a <= 90)
+	if (a>=65 && a<=90)
 	{
-		c = tolower(c);
+		c=tolower(c);
 	}
 
 }
 
 void Rotor::shiftAlphabet()
 {	
-	char c = alphabet[0];
+	char c=alphabet[0];
 
-	for (int i = 0; i < alphabet.size()-1; i++)
+	for (int i=0; i<alphabet.size()-1; i++)
 	{
-		alphabet[i] = alphabet[i+1];
+		alphabet[i]=alphabet[i+1];
 	}
 
 	alphabet[alphabet.size()-1] = c;
@@ -111,7 +111,7 @@ void Rotor::shiftAlphabet()
 
 int Rotor::findLetterPos(char c)
 {
-	return (int) c - 97;
+	return (int) c-97;
 }
 
 char Rotor::retrieveLetter(int i)
@@ -135,7 +135,7 @@ char Rotor::convertPosToChar(int i)
 // This functions builds an inverse of the alphabet array for the flipped iterations
 void Rotor::buildInverse()
 {
-	for (int i = 0; i < alphabet.size(); i++)
+	for (int i=0; i<alphabet.size(); i++)
 	{
 		inverse_alphabet[findLetterPos(retrieveLetter(i))] = convertPosToChar(i);
 	}
@@ -144,7 +144,7 @@ void Rotor::buildInverse()
 
 void Rotor::printInverse()
 {
-	for (int i = 0; i < inverse_alphabet.size(); i++)
+	for (int i=0; i<inverse_alphabet.size(); i++)
 	{
 		std::cout << inverse_alphabet.at(i);
 	}
@@ -156,15 +156,11 @@ void Rotor::printInverse()
 // This function keeps the position and rotation values within bounds
 void Rotor::resetCheck(int& r, int& p)
 {
-	if (p > 25)
-	{
+	if (p>25)
 		p = 0;
-	}
 
-	if (r > 26)
-	{
+	if (r>26)
 		r = 0;
-	}
 
 	return;
 }

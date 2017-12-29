@@ -31,19 +31,13 @@ void KeySheet::getFileContents()
 	    {
 
 	    	if (counter == 0)
-	    	{
 	    		buildRotor(line);
-	    	}
 
 	    	else if (counter == 1)
-	    	{
 	    		buildAlpha(line);
-	    	}
 
 	    	else if (counter == 2)
-	    	{
 	    		buildPlugboard(line);
-	    	}
 
 	    counter++;
 
@@ -57,7 +51,7 @@ void KeySheet::getFileContents()
 
 void KeySheet::buildRotor(std::string line)
 {
-	for (int i = 0; i < line.length(); i++)
+	for (int i=0; i<line.length(); i++)
 	{
 		rotor_order.push_back(line.at(i) - '0');
 	}
@@ -66,7 +60,7 @@ void KeySheet::buildRotor(std::string line)
 
 void KeySheet::buildAlpha(std::string line)
 {
-	for (int i = 0; i < line.length(); i++)
+	for (int i=0; i<line.length(); i++)
 	{
 		start_chars.push_back(line.at(i));
 	}
@@ -78,10 +72,11 @@ void KeySheet::buildAlpha(std::string line)
 void KeySheet::buildPlugboard(std::string line)
 {
 
-	char 	c = ' ';
-	int		x = 0;
+	int 	i=0;
+	int 	x=0;
+	char 	c=' ';
 
-	for (int i = 0; i < line.length(); i++)
+	for (i=0; i<line.length(); i++)
 	{
 
 		if (line.at(i) == ' ')
@@ -96,8 +91,8 @@ void KeySheet::buildPlugboard(std::string line)
 
 		else
 		{
-		plugboard_swaps.push_back(std::make_pair(c, tolower(line.at(i))));
-		x = 0;
+			plugboard_swaps.push_back(std::make_pair(c, tolower(line.at(i))));
+			x=0;
 		}
 
 	}
@@ -106,21 +101,21 @@ void KeySheet::buildPlugboard(std::string line)
 
 void KeySheet::viewInfo()
 {
-	for (int i = 0; i < rotor_order.size(); i++)
+	for (int i=0; i<rotor_order.size(); i++)
 	{
 		std::cout << rotor_order.at(i);
 	}	
 
 	std::cout << std::endl;
 
-	for (int i = 0; i < start_chars.size(); i++)
+	for (int i=0; i<start_chars.size(); i++)
 	{
 		std::cout << start_chars.at(i);
 	}	
 
 	std::cout << std::endl;
 
-	for (int i = 0; i < plugboard_swaps.size(); i++)
+	for (int i=0; i<plugboard_swaps.size(); i++)
 	{
 		std::cout << plugboard_swaps.at(i).first << plugboard_swaps.at(i).second << " ";
 	}
