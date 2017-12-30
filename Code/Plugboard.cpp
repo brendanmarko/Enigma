@@ -16,7 +16,6 @@ void Plugboard::checkPlugboard(char& c)
 {
 	for (int i=0; i<letter_swaps.size(); i++)
 	{
-
 		if (c == letter_swaps.at(i).first)
 			c = letter_swaps.at(i).second;
 

@@ -2,6 +2,6 @@
 
 int main()
 {
-	Enigma e;
-	return 0;
+  Enigma e;
+  return 0;
 }

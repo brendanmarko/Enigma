@@ -7,9 +7,9 @@ clean:
 	@echo "[Cleaning directory]"
 	@if test -f enigma ; then echo "[Removed executable]"; \
 	rm enigma; \
-	fi	
+	fi  
 	@echo "[Complete]"
-	
+
 run:
 	@echo "[Running Enigma...]"
 	@./enigma

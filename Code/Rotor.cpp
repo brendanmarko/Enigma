@@ -34,14 +34,13 @@ void Rotor::buildAlphabet(std::string permutation)
 {
 	for (int i=0; i<26; i++)
 	{
-		alphabet[i] = permutation[i];
+		alphabet[i]=permutation[i];
 	}
-
 }
 
 void Rotor::printAlphabet()
 {
-	for (int i = 0; i < 26; i++)
+	for (int i=0; i<26; i++)
 	{
 		std::cout << alphabet[i];
 	}
@@ -51,8 +50,8 @@ void Rotor::printAlphabet()
 
 void Rotor::getFileContents()
 {
-	std::string 	line = "";
-	std::ifstream 	target_file;
+	std::string 	 line = "";
+	std::ifstream  target_file;
 
 	target_file.open(file_path.c_str(), std::ios::out);
 
@@ -60,11 +59,11 @@ void Rotor::getFileContents()
 	{
 
 		while (getline(target_file, line))
-	    {
-	      rotor_contents = line;
-	    }
+	  {
+	    rotor_contents=line;
+	  }
 
-	target_file.close();
+	  target_file.close();
 	
 	}
 
