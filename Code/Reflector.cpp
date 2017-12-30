@@ -32,10 +32,8 @@ void Reflector::getFileContents()
       reflector_contents=line;
     }
 
-    target_file.close();
-  
+    target_file.close(); 
   }
-
 }
 
 void Reflector::buildAlphabet(std::string permutation)
@@ -44,7 +42,6 @@ void Reflector::buildAlphabet(std::string permutation)
   {
     reflector_board[i]=permutation[i];
   }
-
 }
 
 void Reflector::viewReflector()
