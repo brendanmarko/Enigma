@@ -26,27 +26,22 @@ void KeySheet::getFileContents()
 
   if (target_file.is_open())
   {
-
     while (getline(target_file, line))
     {
-
-      if (counter == 0)
+      if (counter==0)
         buildRotor(line);
 
-      else if (counter == 1)
+      else if (counter==1)
         buildAlpha(line);
 
-      else if (counter == 2)
+      else if (counter==2)
         buildPlugboard(line);
 
       counter++;
-
     }
 
     target_file.close();
-  
   }
-
 }
 
 void KeySheet::buildRotor(std::string line)
@@ -55,7 +50,6 @@ void KeySheet::buildRotor(std::string line)
   {
     rotor_order.push_back(line.at(i) - '0');
   }
-
 }
 
 void KeySheet::buildAlpha(std::string line)
@@ -64,7 +58,6 @@ void KeySheet::buildAlpha(std::string line)
   {
     start_chars.push_back(line.at(i));
   }
-
 }
 
 //buildPlugboard(std::string)
@@ -95,9 +88,7 @@ void KeySheet::buildPlugboard(std::string line)
       plugboard_swaps.push_back(std::make_pair(c, tolower(line.at(i))));
       x=0;
     }
-
   }
-
 }
 
 void KeySheet::viewInfo()
@@ -122,7 +113,6 @@ void KeySheet::viewInfo()
   }
 
   std::cout << std::endl;
-
 }
 
 std::vector<int> KeySheet::getRotors()

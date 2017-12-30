@@ -59,11 +59,9 @@ void RotorCollection::handleInput(std::string input)
     }
     
     result += c;
-
   }
 
   std::cout << "Output: " << result << std::endl;
-
 }
 
 // normalIteration(char&)
@@ -71,12 +69,10 @@ void RotorCollection::handleInput(std::string input)
 // Note: These iteration runs numOfRotors()-1 -> 0
 void RotorCollection::normalIteration(char& c)
 {
-
   for (int i=numOfRotors()-1; i>=0; i--)
   {
     c=rotors.at(i).retrieveLetter(rotors.at(i).findLetterPos(c));
   }
-
 }
 
 // reflectorScramble(char&)
@@ -95,7 +91,6 @@ void RotorCollection::reverseIteration(char& c)
   {
     c=rotors.at(i).inverseLetter(rotors.at(i).findLetterPos(c));
   }
-
 }
 
 // rotorHandler()
@@ -111,7 +106,6 @@ void RotorCollection::rotorHandler()
     if (rotors.at(1).getRotations() == 26)
       rotors.at(0).rotateRotor();
   }
-
 }
 
 // specialChar(char&)

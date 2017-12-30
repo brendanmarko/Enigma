@@ -64,9 +64,7 @@ void Rotor::getFileContents()
     }
 
     target_file.close();
-  
   }
-
 }
 
 int Rotor::getRotations()
@@ -138,7 +136,6 @@ void Rotor::buildInverse()
   {
     inverse_alphabet[findLetterPos(retrieveLetter(i))] = convertPosToChar(i);
   }
-
 }
 
 void Rotor::printInverse()

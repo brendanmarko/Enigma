@@ -68,5 +68,4 @@ void Enigma::addStartPos(RotorCollection& rotors)
   {
     rotors.accessRotor(i).setStartPos(keysheet.getAlphas().at(i));
   }
-
 }
